@@ -47,7 +47,7 @@ def doDotProduct(addr, debug=False):
     b = [random.random() for i in range(100)]
 
     url = addr + '/api/dotproduct'
-    response = requests.post(add_url, headers = headers, data = json.dumps({"a": a, "b":b})
+    response = requests.post(add_url, headers = headers, data = json.dumps({"a": a, "b":b}))
 
     
     if debug:
