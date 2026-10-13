@@ -57,6 +57,7 @@ def doDotProduct(addr, debug=False):
 
 def doJsonImage(addr, debug=False):
     headers = {'content-type': 'application/json'}
+
     img = open('Flatirons_Winter_Sunrise_edit_2.jpg', 'rb').read()
     encoded = base64.b64encode(img).decode('utf-8')
 
