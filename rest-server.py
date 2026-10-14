@@ -69,8 +69,10 @@ def jsonimage():
         data = request.get_json()
         img_bytes = base64.b64decode(data['image'])
         img = Image.open(io.BytesIO(img_bytes))
+        print("what da")
         response = {'width': img.size[0], 'height': img.size[1]}
     except:
+        print("jsonimage error:", repr(e))
         response = {'width': 0, 'height': 0}
 
     response_pickled = jsonpickle.encode(response)
